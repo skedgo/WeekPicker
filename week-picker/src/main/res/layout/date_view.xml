@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOTE: The root layout must be RelativeLayout -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/dayOfWeekView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="2dp"
+        android:textColor="#b3b3b3"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/todayView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dayOfWeekView"
+        android:scaleType="center" />
+
+    <TextView
+        android:id="@+id/dayOfMonthView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dayOfWeekView"
+        android:gravity="center"
+        android:textColor="@color/day_of_month"
+        android:textSize="20sp" />
+
+</merge>
