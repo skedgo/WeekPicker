@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@drawable/shape_date_divider"
+    android:orientation="horizontal"
+    android:showDividers="middle"
+    android:weightSum="7">
+
+    <com.skedgo.android.weekpicker.DateView
+        android:id="@+id/dateView0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <com.skedgo.android.weekpicker.DateView
+        android:id="@+id/dateView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <com.skedgo.android.weekpicker.DateView
+        android:id="@+id/dateView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <com.skedgo.android.weekpicker.DateView
+        android:id="@+id/dateView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <com.skedgo.android.weekpicker.DateView
+        android:id="@+id/dateView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <com.skedgo.android.weekpicker.DateView
+        android:id="@+id/dateView5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <com.skedgo.android.weekpicker.DateView
+        android:id="@+id/dateView6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>
