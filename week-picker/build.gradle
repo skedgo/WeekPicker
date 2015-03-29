@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven'
 
 repositories {
     mavenCentral()
@@ -24,4 +25,22 @@ dependencies {
     androidTestCompile 'org.assertj:assertj-core:1.6.1'
     compile 'com.android.support:support-v4:21.0.3'
     compile 'com.github.johnkil.android-robototextview:robototextview:2.3.0'
+}
+
+task checkDeployPath << {
+    def deployPath = file("../mvn-repo")
+    println "${deployPath.exists()}"
+    println "file://${deployPath.absolutePath}"
+}
+
+uploadArchives {
+    repositories.mavenDeployer {
+        def deployPath = file("../mvn-repo")
+        repository(url: "file://${deployPath.absolutePath}")
+        pom.project {
+            groupId 'com.skedgo'
+            artifactId 'week-picker'
+            version "1.0.0"
+        }
+    }
 }
