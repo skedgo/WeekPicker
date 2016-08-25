@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Default colors which can be overridden in projects that are dependent on this library. -->
+  <color name="wp_dayOfMonthText">@android:color/black</color>
+  <color name="wp_dayOfWeekText">#b3b3b3</color>
+  <color name="wp_selection_circle">@android:color/black</color>
+  <color name="wp_selectedRect">@android:color/white</color>
+  <color name="wp_selectedText">@android:color/white</color>
+  <color name="wp_dateDivider">#f5f5f5</color>
+</resources>

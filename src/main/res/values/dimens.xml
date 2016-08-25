@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="wp_selectedCircleSize">36dp</dimen>
+  <dimen name="wp_dateDividerSize">1dp</dimen>
+  <dimen name="wp_dayOfWeekTextSize">12sp</dimen>
+  <dimen name="wp_dayOfMonthTextSize">20sp</dimen>
+</resources>

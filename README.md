@@ -1,1 +1,1 @@
-# android-week-picker
+# week-picker

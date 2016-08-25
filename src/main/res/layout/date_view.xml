@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <!-- FIXME: Reduce view hierarchy -->
+  <LinearLayout
+    android:id="@+id/wrapperView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:orientation="vertical">
+
+    <TextView
+      android:id="@+id/dayOfWeekView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:textColor="@color/wp_dayOfWeekText"
+      android:textSize="@dimen/wp_dayOfWeekTextSize"
+      tools:text="M" />
+
+    <FrameLayout
+      android:layout_width="@dimen/wp_selectedCircleSize"
+      android:layout_height="@dimen/wp_selectedCircleSize"
+      android:layout_marginTop="3dp">
+
+      <ImageView
+        android:id="@+id/todayView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:src="@drawable/shape_today_circle" />
+
+      <TextView
+        android:id="@+id/dayOfMonthView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/wp_dayOfMonthText"
+        android:textSize="@dimen/wp_dayOfMonthTextSize"
+        tools:text="10" />
+    </FrameLayout>
+  </LinearLayout>
+</RelativeLayout>
