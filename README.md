@@ -1,1 +1,1 @@
-# week-picker
+# WeekPicker
