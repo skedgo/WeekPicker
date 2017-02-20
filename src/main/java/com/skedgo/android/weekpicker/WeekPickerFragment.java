@@ -21,7 +21,6 @@ public class WeekPickerFragment extends Fragment {
   public static final String KEY_SELECTED_DATE = "selectedDate";
   public static final String KEY_WEEK_POSITION = "weekPosition";
   public static final String KEY_PIVOT_DATE = "pivotDate";
-  public static final String KEY_WEEK_START = "weekStart";
   public static final int MAX_WEEK_COUNT = 200;
   private static final String TAG = "AwesomePicker";
   private SwipeDisableViewPager mWeekPickerView;
@@ -44,11 +43,11 @@ public class WeekPickerFragment extends Fragment {
     Bundle args = new Bundle();
     args.putSerializable(KEY_SELECTED_DATE, selectedDate);
     args.putSerializable(KEY_PIVOT_DATE, (Calendar) selectedDate.clone());
-    args.putSerializable(KEY_WEEK_START, weekStart);
 
     WeekPickerFragment fragment = new WeekPickerFragment();
     fragment.setArguments(args);
     fragment.mSelectedDate = selectedDate;
+    fragment.mWeekStart = weekStart;
     return fragment;
   }
 
@@ -75,7 +74,6 @@ public class WeekPickerFragment extends Fragment {
     }
 
     mPivotDate = (Calendar) getArguments().get(KEY_PIVOT_DATE);
-    mWeekStart = (int) getArguments().getSerializable(KEY_WEEK_START);
   }
 
   @Override
