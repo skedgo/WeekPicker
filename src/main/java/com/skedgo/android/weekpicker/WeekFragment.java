@@ -67,6 +67,11 @@ public class WeekFragment extends Fragment {
     ArrayList<Date> dateRange = new ArrayList<Date>();
     Calendar calendar = (Calendar) selectedDate.clone();
     calendar.set(Calendar.DAY_OF_WEEK, convertJodaTimeToCalendar(weekStart));
+
+    if (calendar.after(selectedDate)) {
+      calendar.add(Calendar.DATE, -7);
+    }
+
     for (int i = 0; i < Calendar.DAY_OF_WEEK; i++) {
       Date date = calendar.getTime();
       dateRange.add(date);
