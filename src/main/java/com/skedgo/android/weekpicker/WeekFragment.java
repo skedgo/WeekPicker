@@ -35,6 +35,20 @@ public class WeekFragment extends Fragment {
     mDayOfMonthFormat = new SimpleDateFormat("d");
   }
 
+  public static WeekFragment newInstance(Calendar selectedDate, int weekStart) {
+    Bundle args = new Bundle();
+    args.putSerializable(KEY_SELECTED_DATE, selectedDate);
+
+    ArrayList<Date> dateRange = getDateRangeWithWeekStart(selectedDate, weekStart);
+    args.putSerializable(KEY_DATE_RANGE, dateRange);
+
+    WeekFragment fragment = new WeekFragment();
+    fragment.setArguments(args);
+    fragment.mSelectedDate = selectedDate;
+    fragment.mDateRange = dateRange;
+    return fragment;
+  }
+
   public static WeekFragment newInstance(Calendar selectedDate) {
     Bundle args = new Bundle();
     args.putSerializable(KEY_SELECTED_DATE, selectedDate);
@@ -49,6 +63,19 @@ public class WeekFragment extends Fragment {
     return fragment;
   }
 
+  protected static ArrayList<Date> getDateRangeWithWeekStart(Calendar selectedDate, int weekStart) {
+    ArrayList<Date> dateRange = new ArrayList<Date>();
+    Calendar calendar = (Calendar) selectedDate.clone();
+    calendar.set(Calendar.DAY_OF_WEEK, convertJodaTimeToCalendar(weekStart));
+    for (int i = 0; i < Calendar.DAY_OF_WEEK; i++) {
+      Date date = calendar.getTime();
+      dateRange.add(date);
+      calendar.add(Calendar.DATE, 1);
+    }
+
+    return dateRange;
+  }
+
   protected static ArrayList<Date> getDateRange(Calendar selectedDate) {
     ArrayList<Date> dateRange = new ArrayList<Date>();
     Calendar calendar = (Calendar) selectedDate.clone();
@@ -60,6 +87,10 @@ public class WeekFragment extends Fragment {
     }
 
     return dateRange;
+  }
+
+  private static int convertJodaTimeToCalendar(int date) {
+    return date % 7 + 1;
   }
 
   @Override
