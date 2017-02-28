@@ -68,7 +68,13 @@ public class WeekFragment extends Fragment {
     Calendar calendar = (Calendar) selectedDate.clone();
     calendar.set(Calendar.DAY_OF_WEEK, convertJodaTimeToCalendar(weekStart));
 
+    // For example, selected date is Monday and the week start is next Tuesday.
+    // If we don't shift back to previous week, the picker will show the week 
+    // starting from next Tuesday. That will hide the selected date.
+    // We expect the picker to show the selected date, that's why we need
+    // to shift back.
     if (calendar.after(selectedDate)) {
+      // Shift back to previous week.
       calendar.add(Calendar.DATE, -7);
     }
 
