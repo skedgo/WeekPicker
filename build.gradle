@@ -1,5 +1,6 @@
 buildscript {
   repositories {
+    google()
     jcenter()
   }
 
@@ -23,9 +24,10 @@ android {
 }
 
 repositories {
+  google()
   jcenter()
 }
 
 dependencies {
-  compile "com.android.support:appcompat-v7:27.1.0"
+  implementation "com.android.support:appcompat-v7:27.1.1"
 }
