@@ -2,10 +2,10 @@ package com.skedgo.android.weekpicker;
 
 import android.os.Build;
 import android.os.Bundle;
-import androidx.core.app.Fragment;
-import androidx.core.app.FragmentManager;
-import androidx.core.app.FragmentStatePagerAdapter;
-import androidx.core.view.ViewPager;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 import android.text.format.Time;
 import android.util.Log;
 import android.util.SparseArray;
